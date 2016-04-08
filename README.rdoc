@@ -1,7 +1,6 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This app will be used to allow a usert to locate a food cart vendor within 10 miles of their present location.
 
 Things you may want to cover:
 
