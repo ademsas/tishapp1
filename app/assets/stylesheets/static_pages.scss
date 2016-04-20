@@ -1,0 +1,32 @@
+// Place all the styles related to the static_pages controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/ 
+h1 {
+	text-align: center;
+}
+body {
+	background-image: -webkit-gradient(linear, left top, right top, color-stop(0, #e4efc0), color-stop(100, #abbd73));
+	padding-top: 70px;
+	background-size: cover;
+	font: "Lato", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	color: #888;
+	text-align: center;
+}
+li {
+	float: left;
+}
+.footer {
+	position: fixed;
+	bottom: 0px;
+	width: 100%;
+	height: 40px;
+	background-color: #e3f2fd;
+}
+.container-footer 
+.text-muted {
+	margin: 10px,0;
+}
+.img-responsive {
+	opacity: 0.8;
+	margin: 0 auto;
+}
