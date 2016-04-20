@@ -5,7 +5,10 @@ h1 {
 	text-align: center;
 }
 body {
-	background-image: -webkit-gradient(linear, left top, right top, color-stop(0, #e4efc0), color-stop(100, #abbd73));
+	
+	background: -webkit-linear-gradient(to left, #485563 , #29323c); /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to left, #485563 , #29323c); 
+        
 	padding-top: 70px;
 	background-size: cover;
 	font: "Lato", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -20,13 +23,14 @@ li {
 	bottom: 0px;
 	width: 100%;
 	height: 40px;
-	background-color: #e3f2fd;
+	background-color: #859398;
 }
-.container-footer 
+
 .text-muted {
-	margin: 10px,0;
+	margin: 40px,0;
 }
 .img-responsive {
 	opacity: 0.8;
 	margin: 0 auto;
+	height: 300px;
 }
