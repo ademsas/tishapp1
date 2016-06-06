@@ -3260,6 +3260,7 @@ fieldset[disabled] .btn-success.active {
   color: #ffffff;
   background-color: #3498db;
   border-color: #3498db;
+  margin-top: 0px;
 }
 .btn-info:focus,
 .btn-info.focus {
@@ -4478,7 +4479,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 }
 @media (max-width: 767px) {
   .navbar-form .form-group {
-    margin-bottom: 5px;
+    margin-bottom: 0px;
   }
   .navbar-form .form-group:last-child {
     margin-bottom: 0;
@@ -4537,7 +4538,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   }
   .navbar-right {
     float: right !important;
-    margin-right: -15px;
+    margin-right: -5px;
   }
   .navbar-right ~ .navbar-right {
     margin-right: 0;
@@ -6812,7 +6813,7 @@ button.close {
   line-height: 1;
 }
 .btn {
-  border-width: 2px;
+  border-width: 0px;
 }
 .btn:active {
   -webkit-box-shadow: none;
