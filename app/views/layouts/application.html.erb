@@ -2,7 +2,7 @@
 <html>
 <head>
   <title>Shooter Golf</title>
-  <link rel="stylesheet" type="text/css" href="application.css">
+  <link rel="stylesheet" type="text/css" href="..app/assets/stylesheets/application.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
@@ -28,16 +28,9 @@
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
         <li role="presentation"><a href="/">Home <span class="sr-only">(current)</span></a></li>
-        <li role="presentation"><a href="#">About</a></li>
+        <li role="presentation"><a href="/static_pages/about">About</a></li>
         <li role="presentation"><a href="/products">Products</a></li>
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Contact <span class="caret"></span></a>
-          <ul class="dropdown-menu">
-            <li><a href="#">Email</a></li>
-            <li><a href="#">Phone</a></li>
-            <li><a href="#">Twitter</a></li>
-          </ul>
-        </li>
+        <li role="presentation"><a href="/static_pages/contact">Contact</a></li>
       </ul>
       <%= form_tag("/products", method: "get", :role => 'search', :class => 'navbar-form navbar-right form-control') do %>
         <%= label_tag(:q, "Search for:") %>
