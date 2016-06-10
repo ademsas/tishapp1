@@ -1,11 +1,4 @@
 class ApplicationMailer < ActionMailer::Base
- 	def thank_you
-  		@name = params[:name]
-  		@email = params[:email]
-  		@message = params[:message]
-  		ActionMailer::Base.mail(:from => @email,
-      		:to => 'at.demsas@gmail.com',
-      		:subject => "A new contact form message from #{@name}",
-      		:body => @message).deliver_now
-	end
+	default from: "at.demsas@gmail.com"
+	layout 'mailer'
 end
