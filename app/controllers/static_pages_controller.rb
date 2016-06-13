@@ -15,7 +15,9 @@ ActionMailer::Base.mail(:from => 'from@domain.com', :to => 'to@domain.com', :sub
   		@email = params[:email]
   		@message = params[:message]
   		ActionMailer::Base.mail(:from => @email,
-      	UserMailer.contact_form(@email, @name, @message).deliver_now
+      		:to => 'at.demsas@gmail.com',
+      		:subject => "A new contact form message from #{@name}",
+      		:body => @message).deliver_now
   	end
 
 end
