@@ -11,6 +11,7 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <p class="notice"><%= notice %></p>
 	<nav class="navbar navbar-default navbar-fixed-top" style="background-color: #859398;">
   		<div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
@@ -31,12 +32,22 @@
         <li role="presentation"><a href="/static_pages/about">About</a></li>
         <li role="presentation"><a href="/products">Products</a></li>
         <li role="presentation"><a href="/static_pages/contact">Contact</a></li>
+        <ul class="nav pull-right" style="padding-top: 10px;">
+          <li>
+          <% if user_signed_in? %>
+            <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>
+          <% else %>
+            <%= link_to('Login', new_user_session_path) %>
+          <% end %>
+          </li>
+        </ul>
       </ul>
       <%= form_tag("/products", method: "get", :role => 'search', :class => 'navbar-form navbar-right form-control') do %>
         <%= label_tag(:q, "Search for:") %>
         <%= text_field_tag(:q)%>
         <%= submit_tag("Search", :type => 'submit', :class => 'btn btn-info btn-sm') %>
       <% end %>
+
       
      </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
