@@ -11,7 +11,13 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <p class="notice"><%= notice %></p>
+  <%if alert %>
+    <div class="alert alert-warning alert-dismissible col-md-6 col-md-offset-3" role="alert"><%= alert %></div>
+  <% end %>
+  <%if notice %>
+    <div class="alert alert-danger alert-dismissible col-md-6 col-md-offset-3" role="notice"><%= notice %></div>
+  <% end %>
+  <br>
 	<nav class="navbar navbar-default navbar-fixed-top" style="background-color: #859398;">
   		<div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
