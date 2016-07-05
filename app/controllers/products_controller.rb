@@ -1,4 +1,5 @@
 class ProductsController < ApplicationController
+  protect_from_forgery 
   before_action :set_product, only: [:show, :edit, :update, :destroy]
 
   # GET /products
@@ -16,7 +17,7 @@ class ProductsController < ApplicationController
   # GET /products/1
   # GET /products/1.json
   def show
-    @products = Product.limit(3)
+   @comment = @product.comment.order("created_at DESC")
   end
 
   # GET /products/new

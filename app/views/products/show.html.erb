@@ -54,9 +54,19 @@
           <%= link_to 'Edit', edit_product_path(@product) %> |
           <%= link_to 'Back', products_path %>
         </div>
-       
-    </div>
-    <br>
+        </div>
+
+          
+        <br>    
+        <br>
+      <%= render partial: 'new_comment' %>
+
+      <br>    
+      <br>
+
+      <%= render partial: "comments" %>
+
+    <!-- 
     <div class="col-md-8 col-md-offset-2 container-fluid">   
       <div class="product-info">
           <ul id="myTab" class="nav nav-tabs nav_tabs">
@@ -84,5 +94,6 @@
     
   </div>
 </div>
+-->
 
 
