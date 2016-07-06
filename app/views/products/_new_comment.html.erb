@@ -1,36 +1,29 @@
+   
 <% if signed_in? %>
 <div class="container">
         <div class="row" style="margin-top:40px;">
-          <div class="col-md-6" style="margin-left:150px;">
+          <div class="col-md-6" style="margin-left:180px;">
             <div class="well well-sm">
               <div class="text-center">
                   <a class="btn btn-success btn-green" id="open-review-box">Leave a Review</a>
               </div>
-              <%= form_for([@product, @product.comment.build]) do |f| %>
-              <div class="row" id="post-review-box" style="display:none;">
-                    <div class="col-md-8 col-md-offset-2">
-                        <form accept-charset="UTF-8" action="" method="post">
-                            <input id="ratings-hidden" name="rating" type="hidden"> 
-                            <%= f.text_area :body, class: "form-control animated", id: "new-review", name: "comment", placeholder: "Enter your review here...", rows: "5"  %>
-                            <br>
-                            <div class="text-right">
-                                <div class="rating"></div>
-                                <br>
-                                <a class="btn btn-danger btn-sm" href="#" id="close-review-box" style="display:none; margin-right: 10px;">
-                                <span class="glyphicon glyphicon-remove"></span>Cancel</a>
-                                <%= f.submit "Save", class: "btn btn-success btn-sm" %>
-                                
-                            </div>
-                        </form>
-                    </div>
-                </div>
-                <% end %>
+                  <div class="row " id="post-review-box" style="display:none;">
+                  <%= form_for([@product, @product.comment.build]) do |f| %>
+                    <p>
+                      <%= f.label :body, "Comments" %><br>
+                      <%= f.text_area :body, class: "form-control animated", style: "width: 80%;" "margin-left: 55px;", placeholder: "Enter your review here...", rows: "5" %>
+                    </p>
+                    <p>
+                        <div class="rating"></div>
+                    </p> 
+                    <p>
+                      <%= f.submit "Submit" %>
+                    </p>
+                  <% end %>
+                  </div>
             </div>
-         </div>
-         </div>
-            
-
         </div>
     </div>
+</div>
 <% end %>
-    <br>    
+

@@ -1,4 +1,4 @@
-<p id="notice"><%= notice %></p>
+
 
 <div class="container-fluid col-md-8 col-md-offset-2 panel panel-default" style="border: 2px solid #aba2ab;, border-radius: 10px 10px 10px 10px;, box-shadow: 7px 9px 21px 0px #b1bfc2;">
   <div class="content-wrapper "> 
@@ -39,6 +39,8 @@
               <strong>Color: </strong><%= @product.color %></div>
             </h4>
           <hr>
+          <p>Average Rating: <div class="rated" data-score="<%= @product.average_rating %>"></div> </p>
+          <br>
           <div class="btn-group cart">
             <button type="button" class="btn btn-success">
               Add to cart 

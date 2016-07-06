@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  protect_from_forgery 
+  
   before_action :set_user, only: [:show, :edit, :update, :destroy]
   load_and_authorize_resource
 
@@ -63,14 +63,14 @@ class UsersController < ApplicationController
     end
   end
 
-  private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_user
-      @user = User.find(params[:id])
-    end
+    private
+      # Use callbacks to share common setup or constraints between actions.
+      def set_user
+        @user = User.find(params[:id])
+      end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def user_params
-      params.require(:user).permit(:first_name, :last_name)
-    end
-end
+      # Never trust parameters from the scary internet, only allow the white list through.
+      def user_params
+        params.require(:user).permit(:first_name, :last_name)
+      end
+  end
