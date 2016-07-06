@@ -8,5 +8,5 @@ class User < ActiveRecord::Base
 
 	has_many :orders
 	has_many :comment
-	has_many :products
+	has_many :product
 end
