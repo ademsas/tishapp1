@@ -27,7 +27,7 @@ describe UsersController, :type => :controller do
 			end
 		end
 
-		context "Cannot access second user show page" do
+		context "Cannnot access second user show page" do
 			it "redirects to root" do
 				get :show, id: @user1.id
 				expect(response).to have_http_status(302)
