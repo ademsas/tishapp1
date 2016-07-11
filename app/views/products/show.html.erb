@@ -41,11 +41,11 @@
           <hr>
           <p>Average Rating: <div class="rated" data-score="<%= @product.average_rating %>"></div> </p>
           <br>
-          <div class="btn-group cart">
-            <button type="button" class="btn btn-success">
-              Add to cart 
-            </button>
-          </div>
+          <%= form_tag "/payments/create" do %>
+            <%= render partial: "products/stripe_checkout_button" %>
+            <%= hidden_field_tag(:product_id, @product.id) %>
+          <% end %>
+          <br>
           <div class="btn-group wishlist">
             <button type="button" class="btn btn-danger">
               Add to wishlist 
