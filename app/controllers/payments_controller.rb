@@ -3,7 +3,8 @@ class PaymentsController < ApplicationController
 
     def create
         token = params[:stripeToken]
-        @product = Product.find_by_id(params[:product_id])
+        
+        @product = Product.find(params[:product_id])
         @user = current_user
 
         begin
@@ -13,8 +14,9 @@ class PaymentsController < ApplicationController
                 source: token,
                 description: params[:stripeEmail]
             )
-
+			
             if charge.paid
+            	
                 Order.create(
                     product_id: @product.id,
                     user_id: @user.id,
