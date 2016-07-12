@@ -4,7 +4,6 @@ Rails.application.routes.draw do
   resources :products do
     resources :comments
 
-
   end
 
   
@@ -27,8 +26,9 @@ Rails.application.routes.draw do
   # You can have the root of your site routed with "root"
    root 'static_pages#landing_page'
 
+  
    resources :orders, only: [:index, :show, :create, :destroy]
-
+  
    
 
   # Example of regular route:
