@@ -14,3 +14,26 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+
+$(document).ready(function() {
+  setTimeout(function() {
+      $(".alert").fadeOut("fast", function() {
+          $(this).remove();
+      })
+  }, 1500 );
+  $(".alert_close").click(function(e) {
+    e.preventDefault();
+    $(".alert").remove();
+  })
+});
+
+$(document).on('ready page:load', function(){
+  $('.img-zoom').elevateZoom();
+  $('.rating').raty( { path: '/assets/raty', scoreName: 'comment[rating]' });
+  $('.rated').raty({ path: '/assets/raty',
+    readOnly: true,
+    score: function() {
+      return $(this).attr('data-score');
+    }
+  });
+});
