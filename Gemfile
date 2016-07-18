@@ -70,5 +70,6 @@ gem 'byebug'
 
 gem 'angularjs-rails' 
 
+gem 'dalli'
 
 

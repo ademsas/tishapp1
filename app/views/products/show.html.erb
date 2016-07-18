@@ -8,7 +8,7 @@
           <div class="product col-md-8 col-md-offset-2  panel-heading">
                     
             <center>
-
+              <% cache @product do %>
               <%= image_tag(@product.image_url, class: "img-responsive img-zoom", style: "width: 300px;" "height: 300px;", data_zoom_image: "@product.image_url") %>
             </center>
           </div>
@@ -37,6 +37,7 @@
           <div class="product-color text-left">
             <h4>    
               <strong>Color: </strong><%= @product.color %></div>
+              <% end %>
             </h4>
           <hr>
           <p>Average Rating: <div class="rated" data-score="<%= @product.average_rating %>"></div> </p>
