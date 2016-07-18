@@ -1,6 +1,7 @@
-class OrdersControllers < ApplicationController
+class OrdersController < ApplicationController
 	protect_from_forgery 
-	before_filter :authenticate_user!
+	skip_before_action :verify_authenticity_token, if: :json_request?
+	respond_to :json, :html
 
 	def index
 		@orders = Order.all.to_json(include: [{product: {only: :name}}, {user: {only: :email}}])
@@ -8,15 +9,15 @@ class OrdersControllers < ApplicationController
 	end
 
 	def show
-		@order = Order.find(params[:id]).to_json(include: [{product: {only: :name}}, {user: {only: :email}}])
-    	respond_with @orders
+		@orders = Order.find(params[:id]).to_json(include: [{product: {only: :name}}, {user: {only: :email}}])
+    	respond_with @order
 	end
 
 	def new
 	end
 
 	def create
-		@order = Order.create(order_params)
+		@orders = Order.create(order_params)
     	respond_with @order
 	end
 

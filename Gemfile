@@ -68,5 +68,7 @@ gem 'stripe'
 
 gem 'byebug'
 
+gem 'angularjs-rails' 
+
 
 

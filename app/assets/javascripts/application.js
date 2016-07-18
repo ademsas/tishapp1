@@ -11,9 +11,11 @@
 // about supported directives.
 //
 //= require jquery
+//= require angular
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+
 
 $(document).ready(function() {
   setTimeout(function() {
